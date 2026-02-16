@@ -3,8 +3,7 @@ from fastapi.responses import PlainTextResponse, HTMLResponse
 from sqlmodel import Session
 from models import Product, Order, engine, get_session, create_db_and_tables
 from services import event_bus, send_email_notification, verify_ecpay_checksum, create_ecpay_params
-import timezone
-from datetime import datetime
+from datetime import datetime, timezone
 import asyncio
 
 app = FastAPI(title="Mini E-commerce Backend")
